@@ -1,6 +1,6 @@
 package src.pkg1;
 
-import java.io.*;
+import java.io.IOException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 class Task implements Runnable{
@@ -23,10 +23,10 @@ class Task implements Runnable{
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        String srcFile1 = "a.txt";
-        String srcFile2 = "b.txt";
+        String srcFile1 = "reources/a.txt";
+        String srcFile2 = "reources/b.txt";
 
-        String dstFile1= "c.txt";
+        String dstFile1 = "reources/c.txt";
         String dstFile2 = "d.txt";
         long start = System.currentTimeMillis();
 
