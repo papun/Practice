@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="Big5" ?>
+<doc>
+    <component name="com.demo.ac.contract.offer.CDmMcoOfferHeaderComp">
+        <child name="contractName" order="10" component="CMnTextBoxComp">
+            <int name="size">30</int>
+            <string name="label">Contract Name:</string>
+            <boolean name="required">true</boolean>
+            <property name="fieldMapping" type="CMnFieldMapping">
+                <string name="dataAttrPath">m.viewObj.docName</string>
+            </property>
+        </child>
+    </component>
+
+
+    <component name="com.modeln.ac.contract.offer.CDmMcoOfferHeaderComp">
+        <child name="contractName" component="CMnTextBoxComp" order="10">
+            <int name="size">30</int>
+            <string name="label">My Contract Name::</string>
+            <boolean name="required">true</boolean>
+            <property name="fieldMapping" type="CMnFieldMapping">
+                <string name="dataAttrPath">m.viewObj.docName</string>
+            </property>
+        </child>
+    </component>
+</doc>
