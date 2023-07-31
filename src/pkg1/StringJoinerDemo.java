@@ -1,4 +1,4 @@
-package pkg1;
+package src.pkg1;
 
 import java.util.Arrays;
 import java.util.List;
@@ -18,7 +18,7 @@ public class StringJoinerDemo {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4);
         System.out.println(numbers);
         String commaSeparatedNumbers = numbers.stream().
-                map(i -> i.toString()).collect(Collectors.joining());
+                map(Object::toString).collect(Collectors.joining());
 
         System.out.println(commaSeparatedNumbers);
     }

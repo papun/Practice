@@ -1,4 +1,4 @@
-package pkg1;
+package src.pkg1;
 
 public final class SingleTon extends MyClone {
     private static SingleTon t1;
@@ -11,11 +11,11 @@ public final class SingleTon extends MyClone {
 
     public static SingleTon getInstance() {
         if (t1 == null) {
-            //synchronized (t1) {
+            synchronized (t1) {
                 if (t1 == null) {
                     t1 = new SingleTon();
                 }
-            //}
+            }
         }
         return t1;
     }

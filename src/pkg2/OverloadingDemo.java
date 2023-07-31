@@ -1,4 +1,4 @@
-package pkg2;
+package src.pkg2;
 
 public class OverloadingDemo {
      void print(Object obj) { System.out.println("Object");}

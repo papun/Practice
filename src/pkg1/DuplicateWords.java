@@ -1,7 +1,8 @@
-package pkg1;
+package src.pkg1;
 
 import java.util.Arrays;
 import java.util.Map;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class DuplicateWords {
@@ -9,7 +10,7 @@ public class DuplicateWords {
         String[] s = {"this","is", "is", "the", "list", "of", "price", "list", "types"};
         for (int i = 0; i < s.length; i++) {
             for (int j = i + 1; j < s.length; j++) {
-                if (s[i] == s[j]) {
+                if (Objects.equals(s[i], s[j])) {
                  System.out.println(s[j]);
                 }
             }

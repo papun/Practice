@@ -1,7 +1,7 @@
-package pkg2;
+package src.pkg2;
 
-import pkg1.Employee;
-import pkg1.Java8Demo;
+import src.pkg1.Employee;
+import src.pkg1.Java8Demo;
 
 import java.util.Comparator;
 import java.util.List;

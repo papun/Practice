@@ -1,4 +1,4 @@
-package pkg1;
+package src.pkg1;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,7 +18,7 @@ public class MapToList {
 
         List<Integer> keyList = new ArrayList<>(map.keySet());
         System.out.println(keyList);
-        List<String> values = map.values().stream().collect(Collectors.toList());
+        List<String> values = new ArrayList<>(map.values());
         System.out.println(values);
 
 

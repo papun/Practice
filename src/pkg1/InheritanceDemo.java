@@ -1,4 +1,4 @@
-package pkg1;
+package src.pkg1;
 
 class A{
     public void show(){
@@ -22,6 +22,7 @@ class B extends A{
         System.out.println("Hello1");
     }
 }
+
 public class InheritanceDemo {
     public static void main(String[] args) {
         A a1 = new A();

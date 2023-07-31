@@ -1,4 +1,4 @@
-package pkg1;
+package src.pkg1;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -20,7 +20,7 @@ public class Test {
         //Another
 
         String[] s2 =s1;
-        HashMap<String,Integer> hm = new HashMap();
+        HashMap<String,Integer> hm = new HashMap<>();
         for (int i = 0; i < s2.length; i++) {
             if (s2[i]!="")
                 hm.put(s2[i], hm.getOrDefault(s2[i],0)+1);

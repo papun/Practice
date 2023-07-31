@@ -1,4 +1,4 @@
-package pkg1;
+package src.pkg1;
 
 public class Pallindrome {
     public static void main(String[] args) {

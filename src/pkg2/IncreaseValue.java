@@ -1,4 +1,4 @@
-package pkg2;
+package src.pkg2;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

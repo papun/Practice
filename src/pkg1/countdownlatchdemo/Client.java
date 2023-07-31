@@ -1,4 +1,4 @@
-package pkg1.countdownlatchdemo;
+package src.pkg1.countdownlatchdemo;
 
 import java.util.concurrent.CountDownLatch;
 

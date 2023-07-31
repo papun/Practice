@@ -1,4 +1,4 @@
-package pkg1;
+package src.pkg1;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -8,7 +8,7 @@ public class DuplicateChars {
     public static void main(String[] args) {
         String s = "India";
         char[] chars = s.toCharArray();
-        Map<String, Long> collect = s.chars().mapToObj(c -> (String.valueOf(c))).collect(Collectors.groupingBy(c -> c, Collectors.counting()));
+        Map<String, Long> collect = s.chars().mapToObj(String::valueOf).collect(Collectors.groupingBy(c -> c, Collectors.counting()));
 
         System.out.println(collect);
 

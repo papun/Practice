@@ -1,9 +1,8 @@
-package pkg1;
+package src.pkg1;
 
 import java.io.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
 class Task implements Runnable{
 
     private final String src;

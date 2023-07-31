@@ -1,4 +1,4 @@
-package pkg1;
+package src.pkg1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +24,7 @@ public class GroupEmpByCity {
             System.out.print(e.getKey()+" :");
             System.out.println(e.getValue().stream().map(Employee::getName).collect(Collectors.joining(",")));
         });
+
 
     }
 

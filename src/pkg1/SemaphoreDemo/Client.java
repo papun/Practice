@@ -1,4 +1,4 @@
-package pkg1.SemaphoreDemo;
+package src.pkg1.SemaphoreDemo;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -13,7 +13,7 @@ public class Client {
                     @Override
                     public void run() {
 
-                        Connection.getConnection().connect();
+                       Connection.getConnection().connect();
 
                     }
                 });

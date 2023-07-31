@@ -1,4 +1,4 @@
-package pkg1.DeadlockDemo;
+package src.pkg1.DeadlockDemo;
 
 public class Client {
     public static void main(String[] args) {

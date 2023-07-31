@@ -1,6 +1,6 @@
-package pkg1;
+package src.pkg1;
 
-import pkg1.SingleTon;
+import src.pkg1.SingleTon;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -21,6 +21,7 @@ public class SingletonDemo {
             t3= (SingleTon) c.newInstance();
         }
 
+        assert t3 != null;
         System.out.println(t3.hashCode());
 
 
