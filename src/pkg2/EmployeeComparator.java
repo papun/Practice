@@ -10,6 +10,8 @@ public class EmployeeComparator {
     public static void main(String[] args) {
         List<Employee> eList = Java8Demo.initEmps();
         eList.stream().sorted(Comparator.comparing(Employee::getEmpId).thenComparing(Employee::getEmpSal)).forEach(System.out::println);
+
+        eList.stream().sorted(Comparator.comparing(Employee::getEmpSal)).map(Employee::getEmpName).forEach(System.out::println);
     }
 
 

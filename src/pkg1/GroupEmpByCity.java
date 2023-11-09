@@ -1,13 +1,12 @@
 package src.pkg1;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 public class GroupEmpByCity {
     public static void main(String[] args) {
-        List<Employee> empList = new ArrayList<Employee>();
+        List<Employee> empList;
         empList= List.of(new Employee("John1", "Kolkata1"),
                 new Employee("John2", "Kolkata2"),
                 new Employee("John3", "Kolkata2"),
