@@ -11,8 +11,10 @@ public class MergeArrays {
         System.out.println(Arrays.toString(names1));
         System.out.println(Arrays.toString(names2));
 
-        String[] names11 = Stream.of(names1, names2).flatMap(Stream::of).distinct().toArray(String[]::new);
+        Object[] names11 = Stream.of(names1, names2).flatMap(Stream::of).toArray();
         System.out.println(Arrays.toString(names11));
+
 
     }
 }
+

@@ -1,4 +1,4 @@
-package src.abstractfactory.demo;
+package src.abstractfactorydemo;
 
 public class Application {
 

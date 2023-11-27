@@ -15,7 +15,9 @@ public class ArrayIntersect {
         System.out.println(Arrays.toString(arr2));
 
         List<Integer> ints1 = Arrays.stream(arr1).boxed().collect(Collectors.toList());
+        List<Integer> collect1 = Arrays.stream(arr1).mapToObj(Integer::valueOf).collect(Collectors.toList());
 
+        collect1.forEach(System.out::println);
         for (int i:arr2)
             if (ints1.contains(i))
                 System.out.println(i);

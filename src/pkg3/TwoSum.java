@@ -17,14 +17,14 @@ public class TwoSum {
 
         }
 
-        return null;
+        return new int[]{-1, -1};
 
     }
 
     public static void main(String[] args) {
-        int[] ints = twoSum(new int[]{2, 7, 11, 15}, 9);
+        int[] ints = twoSum(new int[]{2, 7, 11, 15}, 10);
 
-        assert ints != null;
+
         System.out.println(ints[0] + "," + ints[1]);
     }
 }

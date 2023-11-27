@@ -27,14 +27,14 @@ public class Client {
         Thread t2 = new Thread(new Runnable() {
             @Override
             public void run() {
-                synchronized (lock1){
+                synchronized (lock2) {
                     try {
                         System.out.println("Got Lock2 from Thread 2");
                         Thread.sleep(1);
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
-                    synchronized (lock2){
+                    synchronized (lock1) {
                         System.out.println("Got Lock1 from Thread 2");
                     }
                 }

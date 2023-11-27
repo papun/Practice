@@ -14,8 +14,8 @@ public class CompareDemo {
         Comparator<Person> ageComp = Comparator.comparingInt(Person::getAge);
         System.out.println(persons);
         Collections.sort(persons, ageComp);
-
         System.out.println(persons);
+
 
         List a = Arrays.asList(1, 2, 3, 1, 2, 1, 3);
         System.out.println(a);
@@ -37,10 +37,7 @@ class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
+        return "Person{" + "name='" + name + '\'' + ", age=" + age + '}';
     }
 
     public String getName() {
