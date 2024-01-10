@@ -8,7 +8,8 @@ public class ExecutorDemo {
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newFixedThreadPool(2);
         executorService.submit(new Task());
-
+        var x = 10;
+        System.out.print("x" + x);
         executorService.shutdown();
     }
 }
