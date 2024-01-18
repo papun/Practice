@@ -65,7 +65,7 @@ public class Java8FrequentPrograms {
 
         //Find numbers starting with 1
         int[] a1 = {5, 9, 11, 2, 8, 21, 1, 29, 235};
-        List<String> collect3 = Arrays.stream(a1).boxed().map(s1 -> s1 + "")
+        List<String> collect3 = Arrays.stream(a1).mapToObj(s1 -> s1 + "")
                 .filter(s2 -> s2.startsWith("2"))
                 .collect(Collectors.toList());
 

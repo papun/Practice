@@ -11,7 +11,7 @@ public class CompareDemo {
         persons.add(new Person("Bob", 25));
         persons.add(new Person("Charlie", 35));
         persons.add(new Person("David", 22));
-        Comparator<Person> ageComp = Comparator.comparingInt(Person::getAge);
+        Comparator<Person> ageComp = Comparator.comparingInt(Person::getAge).thenComparing(Person::getName);
         System.out.println(persons);
         Collections.sort(persons, ageComp);
         System.out.println(persons);

@@ -6,7 +6,7 @@ public class OverloadingDemo {
     void print(String str) { System.out.println("String") ; }
 
     public static void main(String[] args) {
-        new OverloadingDemo().print(null);
+        new OverloadingDemo().print(new OverloadingDemo());
     }
 }
 

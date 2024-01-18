@@ -10,11 +10,19 @@ public class IncreaseValue {
     static synchronized void increment(){
         i=i+1;
     }
-    public static void main(String[] args) throws InterruptedException {
-        ExecutorService executorService= Executors.newFixedThreadPool(100);
-        IntStream.rangeClosed(0,1000).forEach(i-> executorService.execute(IncreaseValue::increment));
-        Thread.sleep(100);
-        System.out.println(i);
+
+    public static void main(String[] args) {
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        IntStream.rangeClosed(0, 1000).forEach(i -> {
+            System.out.println(i);
+            executorService.submit(IncreaseValue::increment);
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
         executorService.shutdown();
 
 

@@ -3,7 +3,7 @@ package src.pkg3;
 class InvalidAgeException extends Exception {
 
     InvalidAgeException(String msg) {
-        System.out.println("Age is invalid");
+        super(msg);
     }
 }
 
