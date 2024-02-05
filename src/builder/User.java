@@ -17,18 +17,6 @@ public class User {
         return "User{" + "empId=" + empId + ", empName='" + empName + '\'' + ", empSal=" + empSal + '}';
     }
 
-    public Integer getEmpId() {
-        return empId;
-    }
-
-    public String getEmpName() {
-        return empName;
-    }
-
-    public Double getEmpSal() {
-        return empSal;
-    }
-
     static class UserBuilder {
         private Integer empId;
         private String empName;

@@ -2,7 +2,7 @@ package src.pkg1;
 
 import java.util.Objects;
 
-public class Employee {
+public class Employee implements Comparable<Employee> {
     private int empId;
     private String empName;
     private String gender;
@@ -71,4 +71,12 @@ public class Employee {
         return Objects.hash(empId, empName, gender, empSal);
     }
 
+    @Override
+    public int compareTo(Employee o) {
+        if (this.getEmpId() > o.getEmpId())
+            return 1;
+        else if (this.getEmpId() < o.getEmpId()) {
+            return -1;
+        } else return 0;
+    }
 }

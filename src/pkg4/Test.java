@@ -12,10 +12,12 @@ public class Test {
         ExecutorService executorService = Executors.newFixedThreadPool(4);
         List<Integer> intList = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         List<Integer> intList1 = IntStream.rangeClosed(1, 100).boxed().collect(Collectors.toList());
+
+
         for (int i = 0; i < intList1.size(); i++) {
             int finalI = i;
             executorService.submit(() -> {
-                System.out.println(Thread.currentThread().getName() + ":" + finalI);
+                callHello(Thread.currentThread().getName(), finalI);
                 try {
                     TimeUnit.SECONDS.sleep(2);
                 } catch (InterruptedException e) {
@@ -25,6 +27,18 @@ public class Test {
         }
 
         executorService.shutdown();
+    }
+
+    static void callHello(String name, int i) {
+        System.out.println("Hello printed by thread :" + name + " iteration :" + i);
+    }
+}
+
+class Hello implements Runnable {
+
+    @Override
+    public void run() {
+        System.out.println("hello");
     }
 }
 

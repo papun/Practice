@@ -1,5 +1,8 @@
 package src.pkg3;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.*;
 
 public class CompareDemo {
@@ -13,17 +16,19 @@ public class CompareDemo {
         persons.add(new Person("David", 22));
         Comparator<Person> ageComp = Comparator.comparingInt(Person::getAge).thenComparing(Person::getName);
         System.out.println(persons);
-        Collections.sort(persons, ageComp);
+        persons.sort(ageComp);
         System.out.println(persons);
 
 
-        List a = Arrays.asList(1, 2, 3, 1, 2, 1, 3);
+        List<Integer> a = Arrays.asList(1, 2, 3, 1, 2, 1, 3);
         System.out.println(a);
         Collections.sort(a);
         System.out.println(a);
     }
 }
 
+@Setter
+@Getter
 class Person {
     private String name;
     private Integer age;
@@ -39,30 +44,4 @@ class Person {
     public String toString() {
         return "Person{" + "name='" + name + '\'' + ", age=" + age + '}';
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-//    public Double getSal() {
-//        return sal;
-//    }
-//
-//    public void setSal(Double sal) {
-//        this.sal = sal;
-//    }
-
-
 }

@@ -2,7 +2,7 @@ package src.pkg3;
 
 public class ChangeIndexValue {
     public static void main(String[] args) {
-        int[] input1 = {1, 2, 3};
+        int[] input1 = {1, 2, 9};
         int[] output1 = changeIndexValue(input1);
         printArray(output1);
 

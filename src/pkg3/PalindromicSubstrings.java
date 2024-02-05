@@ -5,7 +5,7 @@ import java.util.List;
 
 public class PalindromicSubstrings {
     public static void main(String[] args) {
-        String input = "ababa";
+        String input = "ACABABACA";
         List<String> palindromicSubstrings = getAllPalindromicSubstrings(input);
 
         System.out.println("Palindromic Substrings:");
@@ -24,7 +24,7 @@ public class PalindromicSubstrings {
             expandAroundCenter(s, i, i, palindromicSubstrings);
 
             // Even length palindromes
-            expandAroundCenter(s, i, i + 1, palindromicSubstrings);
+            //expandAroundCenter(s, i, i + 1, palindromicSubstrings);
         }
 
         return palindromicSubstrings;
@@ -32,7 +32,8 @@ public class PalindromicSubstrings {
 
     private static void expandAroundCenter(String s, int left, int right, List<String> palindromicSubstrings) {
         while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
-            palindromicSubstrings.add(s.substring(left, right + 1));
+            if (s.substring(left, right + 1).length() > 1)
+                palindromicSubstrings.add(s.substring(left, right + 1));
             left--;
             right++;
         }

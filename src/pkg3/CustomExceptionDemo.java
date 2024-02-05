@@ -8,11 +8,11 @@ class InvalidAgeException extends Exception {
 }
 
 public class CustomExceptionDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidAgeException {
         try {
             vote(12);
         } catch (InvalidAgeException e) {
-            throw new RuntimeException(e);
+            throw new InvalidAgeException(e.getLocalizedMessage());
         }
     }
 
