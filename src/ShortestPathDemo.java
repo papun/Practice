@@ -69,7 +69,7 @@ public class ShortestPathDemo {
         shortestPathFinder.addEdge("Delhi", "Goa", 1);
 
         // Find shortest path
-        List<String> shortestPath = shortestPathFinder.findShortestPath("Bombay", "Bangalore1");
+        List<String> shortestPath = shortestPathFinder.findShortestPath("Bombay", "Bangalore");
 
         // Display the result
         System.out.println("Shortest Path: " + String.join("->", shortestPath));

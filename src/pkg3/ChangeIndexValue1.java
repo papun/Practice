@@ -2,7 +2,7 @@ package src.pkg3;
 
 public class ChangeIndexValue1 {
     public static void main(String[] args) {
-        int[] input = {9, 9, 9};
+        int[] input = {1, 2, 9};
         int[] output = incrementByOne(input);
 
         printArray(input);
@@ -30,7 +30,6 @@ public class ChangeIndexValue1 {
 
         if (carry > 0) {
             int[] newOutput = new int[n + 1];
-
             newOutput[0] = carry;
             System.arraycopy(output, 0, newOutput, 1, n);
 

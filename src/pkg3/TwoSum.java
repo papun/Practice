@@ -20,7 +20,7 @@ public class TwoSum {
     }
 
     public static void main(String[] args) {
-        int[] ints = twoSum(new int[]{2, 7, 11, 15}, 9);
+        int[] ints = twoSum(new int[]{2, 7, 7, 15}, 9);
         System.out.println(ints[0] + "," + ints[1]);
     }
 }

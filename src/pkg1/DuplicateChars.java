@@ -10,6 +10,7 @@ public class DuplicateChars {
         char[] chars = s.toCharArray();
         Map<String, Long> collect = s.chars().mapToObj(String::valueOf).collect(Collectors.groupingBy(c -> c, Collectors.counting()));
 
+
         System.out.println(collect);
 
 

@@ -2,7 +2,7 @@ package src.pkg3;
 
 public class ReverseStringWithSpaces {
     public static void main(String[] args) {
-        String input = "abc de";
+        String input = "abcd hhjde";
         String output = reverseStringWithSpaces(input);
         System.out.println("Input: " + input);
         System.out.println("Output: " + output);

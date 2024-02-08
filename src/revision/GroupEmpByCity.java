@@ -15,7 +15,7 @@ public class GroupEmpByCity {
         System.out.println(emps);
 
         emps.stream().collect(Collectors.groupingBy(Emp::getCity, LinkedHashMap::new, Collectors.toList())).entrySet()
-                .stream().filter(e1 -> e1.getKey() != "b2")
+                //.stream().filter(e1 -> e1.getKey() != "b2")
                 .forEach(e -> {
                     System.out.print("City :" + e.getKey());
                     System.out.println("  Emps :" + e.getValue().stream().map(Emp::getName).collect(Collectors.joining(",")));

@@ -11,11 +11,15 @@ public class DupChars {
     public static void main(String[] args) {
         String s = "India";
         char[] chars = s.toLowerCase().toCharArray();
-        Map<Character, Long> collect = s.chars().mapToObj(str -> ((char) str)).collect(Collectors.groupingBy(c -> c, counting()));
+        Map<Character, Long> collect = s.toLowerCase().chars().mapToObj(str -> ((char) str)).collect(Collectors.groupingBy(c -> c, counting()));
 
 
         Map<String, Long> collect1 = Stream.of(chars).map(ss -> ss.toString()).collect(Collectors.groupingBy(Function.identity(), counting()));
 
         System.out.println(collect);
+        collect1.forEach((k, v) -> {
+            System.out.println(k);
+            System.out.println(v);
+        });
     }
 }

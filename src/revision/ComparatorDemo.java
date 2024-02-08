@@ -11,7 +11,7 @@ public class ComparatorDemo {
                 new Person("a3", 10));
         System.out.println(personList);
 
-        Comparator<Person> personComparator = Comparator.comparing(Person::getAge).thenComparing(Person::getName);
+        var personComparator = Comparator.comparing(Person::getAge).thenComparing(Person::getName);
         personList.sort(personComparator);
 
         personList.sort(Comparator.comparing(Person::getName).thenComparing(Person::getAge));

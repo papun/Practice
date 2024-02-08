@@ -16,6 +16,9 @@ public class DuplicateWords {
             }
 
         }
+        String str = "This is is the the";
+        String[] s3 = str.split(" ");
+
 
         Map<String, Long> collect = Arrays.stream(s).collect(Collectors.groupingBy(c -> c, Collectors.counting()));
         System.out.println(collect);

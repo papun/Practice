@@ -1,5 +1,6 @@
 package src.pkg3;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,10 +31,10 @@ public class PalindromicSubstrings {
         return palindromicSubstrings;
     }
 
-    private static void expandAroundCenter(String s, int left, int right, List<String> palindromicSubstrings) {
-        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
-            if (s.substring(left, right + 1).length() > 1)
-                palindromicSubstrings.add(s.substring(left, right + 1));
+    private static void expandAroundCenter(String str, int left, int right, List<String> palindromicSubstrings) {
+        while (left >= 0 && right < str.length() && str.charAt(left) == str.charAt(right)) {
+            if (str.substring(left, right + 1).length() > 1)
+                palindromicSubstrings.add(str.substring(left, right + 1));
             left--;
             right++;
         }
