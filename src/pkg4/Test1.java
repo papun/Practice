@@ -37,5 +37,11 @@ public class Test1 {
         Object[] array = Stream.of(a, b).flatMap(Stream::of).toArray();
 
         System.out.println(Arrays.toString(array));
+
+
+        Integer i1 = 500;
+        Integer i2 = 500;
+
+        System.out.println(i1 == i2);
     }
 }

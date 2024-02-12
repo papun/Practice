@@ -14,5 +14,26 @@ public class CommonElements {
         System.out.println(list);
         list2.retainAll(list1);
         System.out.println(list2);
+        String str = "abcd";
+        StringBuilder sb = new StringBuilder(str);
+        sb.insert(3, " ");
+        System.out.println(sb);
+
+        String str1 = "abc de  ffghh jkk";
+        System.out.println(str1);
+        ArrayList<Integer> positions = new ArrayList<>();
+        String nstr = "";
+        for (int i = 0; i < str1.length(); i++) {
+            if (str1.charAt(i) == ' ')
+                positions.add(i);
+            else
+                nstr = str1.charAt(i) + nstr;
+        }
+        StringBuilder sb1 = new StringBuilder(nstr);
+        for (int i = 0; i < positions.size(); i++) {
+            sb1.insert(positions.get(i), " ");
+        }
+        str1 = str1.replaceAll(" ", "");
+        System.out.println(sb1);
     }
 }
