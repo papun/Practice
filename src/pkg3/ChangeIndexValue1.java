@@ -1,12 +1,23 @@
 package src.pkg3;
 
+import java.util.function.Consumer;
+import java.util.function.Function;
+
 public class ChangeIndexValue1 {
     public static void main(String[] args) {
         int[] input = {1, 2, 9};
         int[] output = incrementByOne(input);
 
-        printArray(input);
-        printArray(output);
+//        printArray(input);
+//        printArray(output);
+
+        Consumer<int[]> consumer = (int[] arr) -> ChangeIndexValue1.printArray(arr);
+        Function<int[], int[]> function = (int[] arr) -> ChangeIndexValue1.incrementByOne(arr);
+        int[] apply = function.apply(input);
+        consumer.accept(apply);
+        System.out.println("--------");
+        consumer.accept(input);
+        System.out.println("--------");
     }
 
     private static void printArray(int[] input) {

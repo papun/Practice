@@ -19,7 +19,7 @@ public class RomanToInt {
         hm.put("D",500);
         hm.put("M",1000);
         int sum =0;
-        for (int i = 0; i <= str.length()-1; i++) {
+        for (int i = 0; i < str.length() - 1; i++) {
             System.out.println(str.charAt(i));
             if (hm.get(str.charAt(i)+"")<hm.get(str.charAt(i+1)+"")){
                 sum-=hm.get(str.charAt(i)+"");

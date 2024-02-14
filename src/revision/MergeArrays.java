@@ -10,5 +10,8 @@ public class MergeArrays {
 
         Object[] array = Stream.of(names1, names2).flatMap(Stream::of).distinct().toArray();
         System.out.println(Arrays.toString(array));
+
+        Object[] array1 = Stream.concat(Stream.of(names1), Stream.of(names2)).toArray();
+        System.out.println(Arrays.toString(array1));
     }
 }

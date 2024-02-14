@@ -24,6 +24,7 @@ public class ArrayIntersect {
 
 
         Set<Integer> collect = Arrays.stream(arr1).boxed().collect(Collectors.toSet());
+//        Arrays.stream(arr2).filter(j->!collect.add(j)).collect(Collectors.)
         for (int i:arr2) collect.add(i);
 
         System.out.println(collect);

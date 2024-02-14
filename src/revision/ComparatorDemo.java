@@ -15,6 +15,12 @@ public class ComparatorDemo {
         personList.sort(personComparator);
 
         personList.sort(Comparator.comparing(Person::getName).thenComparing(Person::getAge));
+
+
+        var age = Comparator.comparing(Person::getName);
+
+        personList.sort(age);
+        System.out.println("====");
         System.out.println(personList);
     }
 }

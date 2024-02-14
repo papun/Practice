@@ -11,7 +11,7 @@ public final class SingleTon extends MyClone {
 
     public static SingleTon getInstance() {
         if (t1 == null) {
-            synchronized (t1) {
+            synchronized (SingleTon.class) {
                 if (t1 == null) {
                     t1 = new SingleTon();
                 }
