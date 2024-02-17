@@ -6,11 +6,14 @@ import lombok.Getter;
 
 import java.util.*;
 import java.util.function.BinaryOperator;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Java8Practice {
     public static void main(String[] args) {
-        List<Employee1> eList = initEmps();
+        List<Employee1> eList = new ArrayList<>();
+        initEmps(eList);
+        System.err.println(eList.size());
         eList.forEach(System.out::println);
         //Male Female Count
         System.out.println("=========");
@@ -88,10 +91,22 @@ public class Java8Practice {
                 tt += Character.getNumericValue(c);
         }
         System.out.println(tt);
+
+
+        System.out.println("===========");
+        System.out.println("First Repeated Char");
+
+        String str1 = "Extract digits";
+        LinkedHashMap<Character, Long> collect10 = str1.chars().mapToObj(c -> (char) c).collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()));
+        System.out.println(collect10);
+
+        Character c = collect10.entrySet().stream().filter(e -> e.getValue() > 1).findFirst().map(e1 -> e1.getKey()).stream().findFirst().get();
+        System.out.println(c);
+
     }
 
-    private static List<Employee1> initEmps() {
-        List<Employee1> empList = new ArrayList<>();
+    private static void initEmps(List<Employee1> empList) {
+
 
         empList.add(new Employee1(111, "Jiya Brein", 32, "Female", "HR", 2011, 25000.0));
         empList.add(new Employee1(122, "Paul Niksui", 25, "Male", "Sales And Marketing", 2015, 13500.0));
@@ -111,7 +126,7 @@ public class Java8Practice {
         empList.add(new Employee1(266, "Sanvi Pandey", 26, "Female", "Product Development", 2015, 28900.0));
         empList.add(new Employee1(277, "Anuj Chettiar", 31, "Male", "Product Development", 2012, 35700.0));
 
-        return empList;
+        System.err.println(empList.size());
     }
 }
 
