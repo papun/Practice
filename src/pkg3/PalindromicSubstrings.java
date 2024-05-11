@@ -6,7 +6,7 @@ import java.util.List;
 
 public class PalindromicSubstrings {
     public static void main(String[] args) {
-        String input = "ACABABACA";
+        String input = "ACABABACAC";
         List<String> palindromicSubstrings = getAllPalindromicSubstrings(input);
 
         System.out.println("Palindromic Substrings:");
@@ -24,8 +24,8 @@ public class PalindromicSubstrings {
             // Odd length palindromes
             expandAroundCenter(s, i, i, palindromicSubstrings);
 
-            // Even length palindromes
-            //expandAroundCenter(s, i, i + 1, palindromicSubstrings);
+//            // Even length palindromes
+//            expandAroundCenter(s, i, i + 1, palindromicSubstrings);
         }
 
         return palindromicSubstrings;

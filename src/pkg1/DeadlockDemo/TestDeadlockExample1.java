@@ -2,8 +2,8 @@ package src.pkg1.DeadlockDemo;
 
 public class TestDeadlockExample1 {
     public static void main(String[] args) {
-        final String resource1 = "ratan jaiswal";
-        final String resource2 = "vimal jaiswal";
+        final String resource1 = "a";
+        final String resource2 = "b";
         Thread t1 = new Thread() {
             public void run() {
                 synchronized (resource1) {

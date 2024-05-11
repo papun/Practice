@@ -13,8 +13,6 @@ public class Java8Practice {
     public static void main(String[] args) {
         List<Employee1> eList = new ArrayList<>();
         initEmps(eList);
-        System.err.println(eList.size());
-        eList.forEach(System.out::println);
         //Male Female Count
         System.out.println("=========");
         System.out.println("Male Female Count");
@@ -66,7 +64,7 @@ public class Java8Practice {
         System.out.println(s);
         System.out.println("=========");
         System.out.println("Dept wise Highest Salary");
-        Map<String, Employee1> stringEmployeeMap = eList.stream().collect(Collectors.groupingBy(Employee1::getDepartment, Collectors.collectingAndThen(Collectors.maxBy(Comparator.comparingDouble(Employee1::getSalary)), Optional::get)));
+        Map<String, Employee1> stringEmployeeMap = eList.stream().collect(Collectors.toMap(Employee1::getDepartment, Function.identity(), BinaryOperator.maxBy(Comparator.comparingDouble(Employee1::getSalary))));
 
         System.out.println(stringEmployeeMap);
 
@@ -100,7 +98,7 @@ public class Java8Practice {
         LinkedHashMap<Character, Long> collect10 = str1.chars().mapToObj(c -> (char) c).collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()));
         System.out.println(collect10);
 
-        Character c = collect10.entrySet().stream().filter(e -> e.getValue() > 1).findFirst().map(e1 -> e1.getKey()).stream().findFirst().get();
+        Character c = collect10.entrySet().stream().filter(e -> e.getValue() > 1).findFirst().map(Map.Entry::getKey).stream().findFirst().get();
         System.out.println(c);
 
     }
@@ -126,7 +124,6 @@ public class Java8Practice {
         empList.add(new Employee1(266, "Sanvi Pandey", 26, "Female", "Product Development", 2015, 28900.0));
         empList.add(new Employee1(277, "Anuj Chettiar", 31, "Male", "Product Development", 2012, 35700.0));
 
-        System.err.println(empList.size());
     }
 }
 

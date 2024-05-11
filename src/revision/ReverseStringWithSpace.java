@@ -7,6 +7,8 @@ public class ReverseStringWithSpace {
         String output = reverseAllCharactersWithSpace(input);
         System.out.println("Input:  " + input);
         System.out.println("Output: " + output);
+
+
     }
 
     private static String reverseAllCharactersWithSpace(String input) {
